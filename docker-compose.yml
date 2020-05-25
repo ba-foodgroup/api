@@ -1,0 +1,19 @@
+version: '2.2'
+services:
+  api:
+    build: .
+    command: npm run start
+    volumes:
+      - ./:/app
+    ports:
+        - "3000:3000"
+    environment:
+      NODE_ENV: DEVELOPMENT
+      MYSQL_HOST: 10.8.0.1
+      MYSQL_PORT: 3306
+      MYSQL_USERNAME: 
+      MYSQL_PASSWORD: 
+      MYSQL_DATABASE: 
+      EXPRESS_TRUST_PROXY: 'true'
+      STATIC_CONTENT_PATH: ./static
+      TEMPORARY_FILE_DIRECTORY: './tmp/'

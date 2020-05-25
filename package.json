@@ -1,0 +1,70 @@
+{
+   "name": "foodgroup-api",
+   "version": "0.5.0",
+   "description": "REST API for FoodGroup",
+   "main": "src/index.js",
+   "repository": "git@gitlab.com:bachelor20191/api.git",
+   "devDependencies": {
+      "@types/bcryptjs": "^2.4.2",
+      "@types/body-parser": "^1.19.0",
+      "@types/compression": "^1.7.0",
+      "@types/cors": "^2.8.6",
+      "@types/express-fileupload": "^1.1.2",
+      "@types/helmet": "0.0.45",
+      "@types/jest": "^25.1.3",
+      "@types/jsonwebtoken": "^8.3.7",
+      "@types/node": "^13.7.6",
+      "@types/swagger-ui-express": "^4.1.1",
+      "@types/uuid": "^7.0.0",
+      "cross-env": "^7.0.0",
+      "eslint-config-airbnb-base": "^14.0.0",
+      "jest": "^25.1.0",
+      "ts-jest": "^25.2.1",
+      "ts-node": "8.6.2",
+      "typescript": "^3.8.2"
+   },
+   "dependencies": {
+      "bcryptjs": "^2.4.3",
+      "body-parser": "^1.19.0",
+      "class-validator": "^0.11.0",
+      "compression": "^1.7.4",
+      "cors": "^2.8.5",
+      "dotenv": "^8.2.0",
+      "express": "^4.17.1",
+      "express-fileupload": "^1.1.6",
+      "helmet": "^3.21.3",
+      "jsonwebtoken": "^8.5.1",
+      "mysql": "^2.18.1",
+      "reflect-metadata": "^0.1.13",
+      "swagger-ui-express": "^4.1.3",
+      "ts-node-dev": "^1.0.0-pre.44",
+      "typeorm": "^0.2.24",
+      "uuid": "^7.0.2",
+      "winston": "^3.2.1"
+   },
+   "jest": {
+      "verbose": true,
+      "transform": {
+         "^.+\\.tsx?$": "ts-jest"
+      },
+      "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+      "moduleFileExtensions": [
+         "ts",
+         "js",
+         "json",
+         "node"
+      ]
+   },
+   "scripts": {
+      "tsc": "tsc",
+      "start": "set debug=* && ts-node-dev --respawn --transpileOnly ./src/index.ts",
+      "prod": "cross-env NODE_ENV=PRODUCTION tsc && node ./build/index.js",
+      "test": "jest --coverage --verbose"
+   },
+   "prettier": {
+        "tabWidth": 4,
+        "singleQuote": true,
+        "trailingComma": "none",
+        "endOfLine": "lf"
+    }
+}
